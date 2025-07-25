@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Growcraft</title>
+    <title>Growcraft - Growth Redefined</title>
+    
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #2d1b69 0%, #1a0c3d 50%, #0f051f 100%);
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --bg-primary: #ffffff;
+            --bg-glass: rgba(255, 255, 255, 0.08);
+            --shadow-soft: 0 20px 60px -20px rgba(0, 0, 0, 0.3);
+            --border-glass: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,8 +28,8 @@
         }
 
         body {
-            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0d1117 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--primary-gradient);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -22,138 +38,231 @@
             position: relative;
         }
 
-        /* Animated background particles */
-        .particles {
+        /* Animated background elements */
+        .bg-animation {
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             overflow: hidden;
             z-index: 1;
         }
 
-        .particle {
+        .floating-shape {
             position: absolute;
-            background: rgba(210, 228, 245, 0.1);
+            background: rgba(255, 255, 255, 0.03);
             border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
+            animation: float 20s infinite linear;
         }
 
-        .particle:nth-child(1) { width: 80px; height: 80px; left: 10%; animation-delay: 0s; }
-        .particle:nth-child(2) { width: 60px; height: 60px; left: 20%; animation-delay: 1s; }
-        .particle:nth-child(3) { width: 100px; height: 100px; left: 35%; animation-delay: 2s; }
-        .particle:nth-child(4) { width: 40px; height: 40px; left: 70%; animation-delay: 3s; }
-        .particle:nth-child(5) { width: 120px; height: 120px; left: 85%; animation-delay: 4s; }
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            left: -150px;
+            animation-duration: 25s;
+        }
+
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            top: 20%;
+            right: -100px;
+            animation-duration: 30s;
+            animation-direction: reverse;
+        }
+
+        .shape-3 {
+            width: 150px;
+            height: 150px;
+            bottom: -75px;
+            left: 30%;
+            animation-duration: 22s;
+        }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
-            50% { transform: translateY(-100px) rotate(180deg); opacity: 0.8; }
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0px) rotate(360deg); }
         }
 
         /* Main content container */
-        .container {
-            text-align: center;
-            z-index: 10;
+        .hero-container {
             position: relative;
-            backdrop-filter: blur(20px);
-            background: rgba(20, 20, 20, 0.8);
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
             padding: 60px 40px;
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 24px;
-            border: 1px solid rgba(210, 228, 245, 0.2);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), 0 0 40px rgba(210, 228, 245, 0.1);
-            max-width: 600px;
-            width: 90%;
-            animation: slideUp 1s ease-out;
+            box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.4), 
+                        0 0 120px -30px rgba(45, 27, 105, 0.3);
+            animation: slideUp 0.8s ease-out;
+            transform-origin: center;
         }
 
         @keyframes slideUp {
-            from {
+            0% {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(60px) scale(0.9);
             }
-            to {
+            100% {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateY(0) scale(1);
             }
         }
 
+        .logo-section {
+            margin-bottom: 40px;
+        }
+
         .logo {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 400;
-            font-style: italic;
-            background: linear-gradient(135deg, #d2e4f5 0%, #e8f2ff 50%, #f5f9ff 100%);
+            display: inline-block;
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 20px;
-            letter-spacing: 0.02em;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
             animation: glow 2s ease-in-out infinite alternate;
         }
 
         @keyframes glow {
-            from { filter: drop-shadow(0 0 20px rgba(210, 228, 245, 0.3)); }
-            to { filter: drop-shadow(0 0 30px rgba(210, 228, 245, 0.6)); }
+            0% { filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)); }
+            100% { filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.6)); }
         }
 
         .tagline {
-            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-            color: rgba(255, 255, 255, 0.8);
-            font-weight: 300;
-            font-style: italic;
-            line-height: 1.6;
-            margin-bottom: 40px;
-            animation: fadeIn 1.5s ease-out 0.5s both;
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            margin-bottom: 50px;
+            animation: fadeIn 1s ease-out 0.3s both;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 16px 32px;
-            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
-            color: #d2e4f5;
-            text-decoration: none;
-            border-radius: 50px;
-            border: 2px solid #d2e4f5;
-            font-weight: 400;
+        .main-message {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 30px;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .sub-message {
             font-size: 1.1rem;
-            font-style: italic;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 20px rgba(210, 228, 245, 0.2);
-            animation: fadeIn 2s ease-out 1s both;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            background: linear-gradient(135deg, #d2e4f5 0%, #e8f2ff 100%);
-            color: #000;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 30px rgba(210, 228, 245, 0.4);
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-out 0.9s both;
         }
 
         .coming-soon {
-            margin-top: 30px;
-            color: rgba(255, 215, 0, 0.6);
-            font-size: 0.9rem;
-            font-weight: 300;
-            font-style: italic;
-            animation: fadeIn 2.5s ease-out 1.5s both;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeIn 1s ease-out 1.2s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .coming-soon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .coming-soon:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px -10px rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .coming-soon:hover::before {
+            left: 100%;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.2); }
         }
 
         /* Responsive design */
         @media (max-width: 768px) {
-            .container {
-                padding: 40px 20px;
+            .hero-container {
                 margin: 20px;
+                padding: 40px 24px;
+                border-radius: 20px;
             }
-            
-            .particles {
-                display: none; /* Hide particles on mobile for performance */
+
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            .main-message {
+                font-size: 1.8rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .sub-message {
+                font-size: 1rem;
             }
         }
 
-        /* Accessibility */
+        @media (max-width: 480px) {
+            .hero-container {
+                margin: 16px;
+                padding: 32px 20px;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+
+            .main-message {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Accessibility improvements */
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
                 animation-duration: 0.01ms !important;
@@ -164,40 +273,30 @@
     </style>
 </head>
 <body>
-    <div class="particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+    <div class="bg-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
     </div>
 
-    <div class="container">
-        <h1 class="logo">Growcraft</h1>
-        <p class="tagline">Hello world, I am Growcraft</p>
-        <a href="#" class="cta-button">Coming Soon</a>
-        <p class="coming-soon">Something amazing is brewing...</p>
-    </div>
+    <main class="hero-container">
+        <section class="logo-section">
+            <h1 class="logo">Growcraft</h1>
+            <p class="tagline">Growth Redefined</p>
+        </section>
 
-    <script>
-        // Add some interactive elements
-        document.addEventListener('mousemove', (e) => {
-            const container = document.querySelector('.container');
-            const rect = container.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
+        <section class="content-section">
+            <h2 class="main-message">Hello World, I am Growcraft</h2>
+            <p class="sub-message">
+                We're crafting something extraordinary. A new approach to growth that combines 
+                innovation with purpose, strategy with heart.
+            </p>
             
-            const moveX = x / rect.width * 10;
-            const moveY = y / rect.height * 10;
-            
-            container.style.transform = `translate(${moveX}px, ${moveY}px)`;
-        });
-
-        // Reset position when mouse leaves
-        document.addEventListener('mouseleave', () => {
-            const container = document.querySelector('.container');
-            container.style.transform = 'translate(0px, 0px)';
-        });
-    </script>
+            <a href="#" class="coming-soon" role="button" aria-label="Coming soon notification">
+                <span class="pulse-dot" aria-hidden="true"></span>
+                <span>Something amazing is coming</span>
+            </a>
+        </section>
+    </main>
 </body>
 </html>
