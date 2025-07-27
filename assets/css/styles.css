@@ -297,13 +297,20 @@ body {
     border-radius: 50%;
     margin: 0 auto 25px;
     background: var(--secondary-gradient);
-    border: 3px solid rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(99, 102, 241, 0.2);
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
     color: var(--text-muted);
+}
+
+.founder-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .founder-name {
