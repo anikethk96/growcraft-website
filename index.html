@@ -6,7 +6,6 @@
     <title>Growcraft - AI Analytics Platform</title>
     <link rel="icon" type="image/png" href="IconOnly_Transparent_NoBuffer.png">
     
-    <!-- Complete Stylesheet - Everything Included -->
     <style>
         /* ===================================
            MODERN B2B SAAS WEBSITE STYLESHEET
@@ -180,8 +179,8 @@
         }
 
         .nav-logo img {
-            width: 32px;
-            height: 32px;
+            width: 48px; /* Edited: Enlarged logo size */
+            height: auto; /* Edited: Changed height to auto to maintain aspect ratio */
             flex-shrink: 0;
         }
 
@@ -707,12 +706,10 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Menu -->
     <nav id="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">
                 <img src="Print_Transparent.svg" alt="Growcraft Logo" />
-                Growcraft
             </a>
             
             <ul class="nav-menu" id="nav-menu">
@@ -744,19 +741,14 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Animated Vector Network Background -->
     <section class="hero" id="home">
-        <!-- Vector Network Animation -->
         <div class="vector-network">
             <svg id="networkSvg" xmlns="http://www.w3.org/2000/svg">
-                <!-- Vector lines will be dynamically generated here -->
-            </svg>
+                </svg>
         </div>
         
-        <!-- Network nodes -->
         <div id="networkNodes"></div>
         
-        <!-- Gradient orb for depth -->
         <div class="gradient-orb"></div>
         <div class="grid-overlay"></div>
         
@@ -772,7 +764,6 @@
         </div>
     </section>
 
-    <!-- Problems Section -->
     <section class="problem-section" id="problems">
         <div class="container">
             <h2 class="section-title">The Challenges We Solve</h2>
@@ -808,7 +799,6 @@
         </div>
     </section>
 
-    <!-- Solution Section -->
     <section class="solution-section" id="solution">
         <div class="container">
             <div class="solution-content">
@@ -823,14 +813,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2024 Growcraft. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Navigation and Vector Network Animation -->
     <script>
         // Hamburger Menu Toggle
         const hamburger = document.getElementById('hamburger');
