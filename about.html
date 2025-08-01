@@ -4,83 +4,375 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Growcraft</title>
+    <link rel="icon" type="image/png" href="IconOnly_Transparent_NoBuffer.png">
+    <link rel="stylesheet" href="styles.css">
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Learn about Growcraft's mission, vision, and values. Discover how we're redefining growth through innovation and human-centered design.">
     <meta name="keywords" content="about Growcraft, mission, vision, values, growth strategy, innovation">
-    
-    <!-- No external fonts needed - using system font stack -->
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo-nav">Growcraft</a>
+            <a href="index.html" class="nav-logo">
+                <img src="FullLogo_Transparent_NoBuffer.png" alt="Growcraft Logo" />
+            </a>
             
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="platform.html" class="nav-link">Swarm Platform</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="platform.html" class="nav-link">Swarm Platform</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item nav-cta">
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </li>
             </ul>
             
-            <button class="mobile-menu-btn">☰</button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            <div class="content-header">
-                <h1 class="section-title">About Growcraft</h1>
-                <p class="section-subtitle">
-                    We're pioneering the future of retail analytics through swarm intelligence. 
-                    Our AI agents unlock hyper-connected collaboration to transform complex retail data into actionable growth insights.
-                </p>
-            </div>
+    <section class="hero about-hero" id="about">
+        <div class="vector-network">
+            <svg id="networkSvg" xmlns="http://www.w3.org/2000/svg">
+            </svg>
+        </div>
+        
+        <div id="networkNodes"></div>
+        
+        <div class="gradient-orb"></div>
+        <div class="grid-overlay"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title gradient-text">About Growcraft</h1>
+            <p class="hero-subtitle">
+                We're pioneering the future of retail analytics through swarm intelligence. 
+                Our AI agents unlock hyper-connected collaboration to transform complex retail data into actionable growth insights.
+            </p>
+        </div>
+    </section>
 
-            <!-- Founders Section -->
-            <div class="founders-grid">
-                <div class="founder-card">
+    <section class="founders-section">
+        <div class="container">
+            <h2 class="section-title">Our Leadership</h2>
+            
+            <div class="founders-grid problems-grid">
+                <div class="founder-card problem-card">
                     <div class="founder-image">
                         <img src="assets/founders/Aniketh.jpg" alt="Aniketh Kulkarni, Co-Founder & CEO">
                     </div>
-                    <h3 class="founder-name">Aniketh Kulkarni</h3>
-                    <p class="founder-title">Co-Founder & CEO</p>
-                    <p class="founder-bio">
+                    <h3 class="founder-name problem-title">Aniketh Kulkarni</h3>
+                    <p class="founder-title" style="color: var(--accent-primary); font-weight: 500; margin-bottom: var(--space-md);">Co-Founder & CEO</p>
+                    <p class="founder-bio problem-description">
                         Aniketh has over 7 years of experience in building enterprise AI/ML and analytics solution for retail. He brings deep expertise in omni-channel retail analytics across multiple functions such as marketing, merchandizing and product analytics. He holds a masters degree in analytics from Purdue University and is also an alumnus of NITK Surathkal, India
                     </p>
                 </div>
 
-                <div class="founder-card">
+                <div class="founder-card problem-card">
                     <div class="founder-image">
                         <img src="assets/founders/Sajjal.jpeg" alt="Sudhindra Sajjal, Co-Founder & CTO">
                     </div>
-                    <h3 class="founder-name">Sudhindra Sajjal</h3>
-                    <p class="founder-title">Co-Founder & CTO</p>
-                    <p class="founder-bio">
+                    <h3 class="founder-name problem-title">Sudhindra Sajjal</h3>
+                    <p class="founder-title" style="color: var(--accent-primary); font-weight: 500; margin-bottom: var(--space-md);">Co-Founder & CTO</p>
+                    <p class="founder-bio problem-description">
                         Sudhindra is a computer science graduate from BITS Pilani, Goa with deep expertise in product design and computer architecture. He brings over 8 years of experience working for leading companies like Bloomberg, WireCard and Directi. 
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Company Values -->
-            <div style="margin-top: 80px;">
-                <div class="content-header">
-                    <h2 class="section-title" style="font-size: 2.2rem;">Our Mission</h2>
-                    <p class="section-subtitle">
-                        Think beyond individual AI Agents built by SaaS companies that replace individual SaaS products. Build an army of specialized AI Agents that talk to each other like humans never could. Have this army run your analytics while you sleep and empower you to do what you do best - Make decisions! 
+    <section class="solution-section mission-section">
+        <div class="container">
+            <div class="solution-content">
+                <h2 class="section-title gradient-text">Our Mission</h2>
+                <div class="solution-highlight">
+                    <p>
+                        Think beyond individual AI Agents built by SaaS companies that replace individual SaaS products. Build an army of specialized AI Agents that talk to each other like humans never could. Have this army run your analytics while you sleep and empower you to do what you do best - Make decisions!
                     </p>
                 </div>
+                <a href="#" class="btn btn-primary">Join Our Journey</a>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Growcraft. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const body = document.body;
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            body.classList.toggle('menu-open');
+        });
+
+        // Close menu when clicking nav links (mobile)
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                body.classList.remove('menu-open');
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Vector Network Animation
+        function createVectorNetwork() {
+            const svg = document.getElementById('networkSvg');
+            const nodesContainer = document.getElementById('networkNodes');
+            const hero = document.querySelector('.hero');
+            
+            // Clear existing content
+            svg.innerHTML = '';
+            nodesContainer.innerHTML = '';
+            
+            const width = hero.offsetWidth;
+            const height = hero.offsetHeight;
+            
+            svg.setAttribute('width', width);
+            svg.setAttribute('height', height);
+            
+            // Create network nodes (connection points)
+            const nodes = [];
+            const nodeCount = Math.min(12, Math.floor(width / 100)); // Responsive node count
+            
+            for (let i = 0; i < nodeCount; i++) {
+                const node = {
+                    x: Math.random() * width * 0.8 + width * 0.1, // Keep nodes away from edges
+                    y: Math.random() * height * 0.8 + height * 0.1,
+                    vx: (Math.random() - 0.5) * 0.5, // Slow movement
+                    vy: (Math.random() - 0.5) * 0.5,
+                    connections: []
+                };
+                nodes.push(node);
+                
+                // Create visual node element
+                const nodeElement = document.createElement('div');
+                nodeElement.className = 'network-node';
+                if (Math.random() > 0.7) nodeElement.classList.add('pulse');
+                nodeElement.style.left = node.x + 'px';
+                nodeElement.style.top = node.y + 'px';
+                nodesContainer.appendChild(nodeElement);
+            }
+            
+            // Create connections between nearby nodes
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const distance = Math.sqrt(
+                        Math.pow(nodes[i].x - nodes[j].x, 2) + 
+                        Math.pow(nodes[i].y - nodes[j].y, 2)
+                    );
+                    
+                    // Connect nodes that are close enough
+                    if (distance < Math.min(width, height) * 0.25) {
+                        nodes[i].connections.push(j);
+                        
+                        // Create SVG line
+                        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                        line.setAttribute('x1', nodes[i].x);
+                        line.setAttribute('y1', nodes[i].y);
+                        line.setAttribute('x2', nodes[j].x);
+                        line.setAttribute('y2', nodes[j].y);
+                        line.setAttribute('stroke', `rgba(99, 102, 241, ${0.1 + Math.random() * 0.2})`);
+                        line.setAttribute('stroke-width', Math.random() * 1.5 + 0.5);
+                        line.setAttribute('stroke-dasharray', '5,10');
+                        line.setAttribute('stroke-dashoffset', '1000');
+                        
+                        // Animate line drawing
+                        line.style.animation = `drawLine ${2 + Math.random() * 3}s ease-in-out infinite alternate`;
+                        line.style.animationDelay = Math.random() * 2 + 's';
+                        
+                        svg.appendChild(line);
+                    }
+                }
+            }
+            
+            // Add some random vector lines for extra AI feel
+            for (let i = 0; i < 8; i++) {
+                const startX = Math.random() * width;
+                const startY = Math.random() * height;
+                const length = Math.random() * 200 + 100;
+                const angle = Math.random() * Math.PI * 2;
+                const endX = startX + Math.cos(angle) * length;
+                const endY = startY + Math.sin(angle) * length;
+                
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.setAttribute('x1', startX);
+                line.setAttribute('y1', startY);
+                line.setAttribute('x2', endX);
+                line.setAttribute('y2', endY);
+                line.setAttribute('stroke', `rgba(14, 165, 233, ${0.05 + Math.random() * 0.1})`);
+                line.setAttribute('stroke-width', Math.random() * 1 + 0.5);
+                line.setAttribute('stroke-dasharray', '2,8');
+                line.setAttribute('stroke-dashoffset', '1000');
+                
+                line.style.animation = `drawLine ${3 + Math.random() * 4}s ease-in-out infinite alternate`;
+                line.style.animationDelay = Math.random() * 3 + 's';
+                
+                svg.appendChild(line);
+            }
+            
+            // Animate nodes (subtle movement)
+            function animateNodes() {
+                const nodeElements = document.querySelectorAll('.network-node');
+                nodes.forEach((node, index) => {
+                    // Update position
+                    node.x += node.vx;
+                    node.y += node.vy;
+                    
+                    // Bounce off edges
+                    if (node.x <= 0 || node.x >= width) node.vx *= -1;
+                    if (node.y <= 0 || node.y >= height) node.vy *= -1;
+                    
+                    // Keep nodes in bounds
+                    node.x = Math.max(0, Math.min(width, node.x));
+                    node.y = Math.max(0, Math.min(height, node.y));
+                    
+                    // Update visual position
+                    if (nodeElements[index]) {
+                        nodeElements[index].style.left = node.x + 'px';
+                        nodeElements[index].style.top = node.y + 'px';
+                    }
+                });
+                
+                requestAnimationFrame(animateNodes);
+            }
+            
+            // Start subtle node animation
+            animateNodes();
+        }
+        
+        // Initialize vector network
+        createVectorNetwork();
+        
+        // Recreate network on window resize
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(createVectorNetwork, 500);
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.founder-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+    </script>
+
+    <style>
+        /* Additional styles specific to the about page */
+        .about-hero {
+            min-height: 60vh;
+        }
+        
+        .founders-section {
+            padding: var(--space-5xl) 0;
+            background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
+        }
+        
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-2xl);
+        }
+        
+        .founder-card {
+            text-align: center;
+        }
+        
+        .founder-image {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto var(--space-xl);
+            overflow: hidden;
+            border-radius: 50%;
+            border: 3px solid var(--accent-primary);
+        }
+        
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .founder-name {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .founder-title {
+            margin-bottom: var(--space-md);
+        }
+        
+        .founder-bio {
+            text-align: left;
+        }
+        
+        .mission-section {
+            background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+        }
+        
+        @media (max-width: 768px) {
+            .founders-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .founder-card {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+    </style>
 </body>
 </html>
