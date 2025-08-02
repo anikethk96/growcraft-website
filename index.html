@@ -303,8 +303,8 @@
         /* Network nodes (connection points) */
         .network-node {
             position: absolute;
-            width: 4px;
-            height: 4px;
+            width: 16px;
+            height: 16px;
             background: rgba(99, 102, 241, 0.4);
             border-radius: 50%;
             z-index: 1;
@@ -927,7 +927,7 @@
                         line.setAttribute('x2', nodes[j].x);
                         line.setAttribute('y2', nodes[j].y);
                         line.setAttribute('stroke', `rgba(99, 102, 241, ${0.1 + Math.random() * 0.2})`);
-                        line.setAttribute('stroke-width', Math.random() * 1.5 + 0.5);
+                        line.setAttribute('stroke-width', Math.random() * 3.5 + 0.5);
                         line.setAttribute('stroke-dasharray', '5,10');
                         line.setAttribute('stroke-dashoffset', '1000');
                         
@@ -955,7 +955,7 @@
                 line.setAttribute('x2', endX);
                 line.setAttribute('y2', endY);
                 line.setAttribute('stroke', `rgba(14, 165, 233, ${0.05 + Math.random() * 0.1})`);
-                line.setAttribute('stroke-width', Math.random() * 1 + 0.5);
+                line.setAttribute('stroke-width', Math.random() * 3 + 0.5);
                 line.setAttribute('stroke-dasharray', '2,8');
                 line.setAttribute('stroke-dashoffset', '1000');
                 
