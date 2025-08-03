@@ -550,7 +550,7 @@
 
         .solution-content {
             text-align: center;
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -560,6 +560,256 @@
             padding: var(--space-xl);
             border-radius: var(--radius-md);
             margin: var(--space-2xl) 0;
+        }
+
+        /* ===================================
+           LAPTOP MOCKUP WITH DASHBOARD
+           =================================== */
+        .laptop-mockup {
+            margin: var(--space-4xl) 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .laptop-frame {
+            position: relative;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .laptop-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .dashboard-overlay {
+            position: absolute;
+            top: 8%;
+            left: 12%;
+            right: 12%;
+            bottom: 8%;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        /* Dashboard Header */
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .dashboard-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .dashboard-nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-item {
+            font-size: 14px;
+            color: #64748b;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .nav-item.active {
+            background: rgba(154, 24, 28, 0.1);
+            color: #9a181c;
+            font-weight: 500;
+        }
+
+        .nav-item:hover {
+            background: #f1f5f9;
+            color: #475569;
+        }
+
+        /* Dashboard Main Content */
+        .dashboard-main {
+            flex: 1;
+            padding: 24px;
+            overflow-y: auto;
+        }
+
+        .dashboard-title h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+
+        .dashboard-title p {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 24px;
+        }
+
+        /* Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .metric-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.2s;
+        }
+
+        .metric-card:hover {
+            border-color: #9a181c;
+            box-shadow: 0 2px 8px rgba(154, 24, 28, 0.1);
+        }
+
+        .metric-icon {
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(154, 24, 28, 0.1);
+            border-radius: 8px;
+        }
+
+        .metric-content {
+            flex: 1;
+        }
+
+        .metric-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0f172a;
+            line-height: 1.2;
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 2px;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .chart-placeholder {
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chart-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 16px;
+        }
+
+        .chart-bars {
+            flex: 1;
+            display: flex;
+            align-items: end;
+            gap: 12px;
+            padding: 0 20px;
+        }
+
+        .bar {
+            flex: 1;
+            background: linear-gradient(to top, #9a181c, #df3035);
+            border-radius: 4px 4px 0 0;
+            min-height: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .bar:hover {
+            transform: scaleY(1.05);
+        }
+
+        /* AI Status */
+        .ai-status {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .ai-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .ai-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.7;
+                transform: scale(1.2);
+            }
+        }
+
+        .ai-indicator span {
+            font-size: 14px;
+            font-weight: 500;
+            color: #0f172a;
+        }
+
+        .ai-tasks {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .ai-tasks span {
+            font-size: 12px;
+            color: #64748b;
+            background: #ffffff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
         }
 
         /* ===================================
@@ -663,6 +913,104 @@
             
             .problems-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            /* Mobile Laptop Mockup */
+            .laptop-mockup {
+                margin: var(--space-2xl) 0;
+            }
+            
+            .laptop-frame {
+                max-width: 100%;
+            }
+            
+            .dashboard-overlay {
+                top: 6%;
+                left: 8%;
+                right: 8%;
+                bottom: 6%;
+            }
+            
+            .dashboard-header {
+                padding: 12px 16px;
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+            }
+            
+            .dashboard-nav {
+                gap: 12px;
+            }
+            
+            .nav-item {
+                font-size: 12px;
+                padding: 6px 8px;
+            }
+            
+            .dashboard-main {
+                padding: 16px;
+            }
+            
+            .dashboard-title h3 {
+                font-size: 16px;
+            }
+            
+            .dashboard-title p {
+                font-size: 12px;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            
+            .metric-card {
+                padding: 12px;
+            }
+            
+            .metric-icon {
+                font-size: 20px;
+                width: 32px;
+                height: 32px;
+            }
+            
+            .metric-value {
+                font-size: 14px;
+            }
+            
+            .metric-label {
+                font-size: 10px;
+            }
+            
+            .chart-container {
+                padding: 16px;
+            }
+            
+            .chart-placeholder {
+                height: 150px;
+            }
+            
+            .chart-title {
+                font-size: 14px;
+                margin-bottom: 12px;
+            }
+            
+            .chart-bars {
+                gap: 8px;
+                padding: 0 12px;
+            }
+            
+            .ai-status {
+                padding: 12px;
+            }
+            
+            .ai-tasks {
+                gap: 8px;
+            }
+            
+            .ai-tasks span {
+                font-size: 10px;
+                padding: 3px 6px;
             }
         }
 
@@ -810,6 +1158,98 @@
                         Agent swarm model not only ensures true contextual automation of individual repetitive tasks but also ensures a seamless integration to meet a higher collective goal for the business.
                     </p>
                 </div>
+                
+                <!-- Laptop Mockup with Dashboard -->
+                <div class="laptop-mockup">
+                    <div class="laptop-frame">
+                        <img src="assets/founders/Blank laptop screen.png" alt="Laptop Mockup" class="laptop-image">
+                        <div class="dashboard-overlay">
+                            <div class="dashboard-content">
+                                <!-- Dashboard Header -->
+                                <div class="dashboard-header">
+                                    <div class="dashboard-logo">
+                                        <img src="IconOnly_Transparent_NoBuffer.png" alt="Growcraft" style="width: 40px; height: auto;">
+                                        <span style="font-weight: 600; color: #9a181c; margin-left: 8px;">Growcraft AI</span>
+                                    </div>
+                                    <div class="dashboard-nav">
+                                        <span class="nav-item active">Dashboard</span>
+                                        <span class="nav-item">Analytics</span>
+                                        <span class="nav-item">Reports</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Dashboard Main Content -->
+                                <div class="dashboard-main">
+                                    <div class="dashboard-title">
+                                        <h3>Retail Analytics Dashboard</h3>
+                                        <p>Real-time insights powered by AI agents</p>
+                                    </div>
+                                    
+                                    <!-- Metrics Cards -->
+                                    <div class="metrics-grid">
+                                        <div class="metric-card">
+                                            <div class="metric-icon">📈</div>
+                                            <div class="metric-content">
+                                                <div class="metric-value">$2.4M</div>
+                                                <div class="metric-label">Total Sales</div>
+                                            </div>
+                                        </div>
+                                        <div class="metric-card">
+                                            <div class="metric-icon">🛒</div>
+                                            <div class="metric-content">
+                                                <div class="metric-value">1,247</div>
+                                                <div class="metric-label">Orders</div>
+                                            </div>
+                                        </div>
+                                        <div class="metric-card">
+                                            <div class="metric-icon">👥</div>
+                                            <div class="metric-content">
+                                                <div class="metric-value">892</div>
+                                                <div class="metric-label">Customers</div>
+                                            </div>
+                                        </div>
+                                        <div class="metric-card">
+                                            <div class="metric-icon">📊</div>
+                                            <div class="metric-content">
+                                                <div class="metric-value">+12.5%</div>
+                                                <div class="metric-label">Growth</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Chart Area -->
+                                    <div class="chart-container">
+                                        <div class="chart-placeholder">
+                                            <div class="chart-title">Sales Performance</div>
+                                            <div class="chart-bars">
+                                                <div class="bar" style="height: 60%;"></div>
+                                                <div class="bar" style="height: 80%;"></div>
+                                                <div class="bar" style="height: 45%;"></div>
+                                                <div class="bar" style="height: 90%;"></div>
+                                                <div class="bar" style="height: 70%;"></div>
+                                                <div class="bar" style="height: 85%;"></div>
+                                                <div class="bar" style="height: 95%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- AI Agent Status -->
+                                    <div class="ai-status">
+                                        <div class="ai-indicator">
+                                            <div class="ai-dot"></div>
+                                            <span>AI Agents Active</span>
+                                        </div>
+                                        <div class="ai-tasks">
+                                            <span>Processing data...</span>
+                                            <span>Generating insights...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <a href="about.html" class="btn btn-primary">Learn More About Our Approach</a>
             </div>
         </div>
