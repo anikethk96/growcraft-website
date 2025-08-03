@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growcraft AI - Laptop Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/laptop-landing.css">
+</head>
+<body>
+    <div class="laptop-container">
+        <img src="assets/founders/laptop_screen.png" alt="Laptop Mockup" class="laptop-image">
+        
+        <div class="content-overlay">
+            <div class="scaled-content">
+                <!-- Header -->
+                <header class="header">
+                    <div class="header-content">
+                        <div class="logo">
+                            <div class="logo-text">Growcraft AI</div>
+                        </div>
+                        
+                        <nav>
+                            <ul class="nav-links">
+                                <li><a href="#dashboard">Dashboard</a></li>
+                                <li><a href="#reports">Reports</a></li>
+                                <li><a href="#settings">Settings</a></li>
+                                <li><a href="#help">Help</a></li>
+                            </ul>
+                        </nav>
+                        
+                        <a href="#" class="cta-button">Go to Dashboard</a>
+                    </div>
+                </header>
+
+                <!-- Main Content -->
+                <main class="main-content">
+                    <div class="hero-container">
+                        <!-- Left Section - Welcome Message (60%) -->
+                        <div class="hero-content">
+                            <h1 class="hero-title">Howdy Sarah! I'm Voyant, your analytics assistant</h1>
+                            <p class="hero-subtitle">I can answer your questions about your data, conduct in-depth analyses, build reports, and help you make data-driven decisions</p>
+                            <p class="hero-description">
+                                You now have access to real-time analytics, intelligent recommendations and seamless visibility across all areas of your retail business. 
+                                </p>
+                            
+                            <div class="hero-buttons">
+                                <a href="#" class="btn-primary">
+                                    <i class="fas fa-chart-line"></i>
+                                    Explore your data
+                                </a>
+                                <a href="#" class="btn-secondary">
+                                    <i class="fas fa-question-circle"></i>
+                                    Get Started Guide
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Section - Chatbot Interface (40%) -->
+                        <div class="hero-chatbot">
+                            <div class="chatbot-interface">
+                                <div class="chatbot-header">
+                                    <div class="chatbot-title">
+                                        <i class="fas fa-robot"></i>
+                                        <span>Voyant AI Assistant</span>
+                                    </div>
+                                    <div class="chatbot-status">
+                                        <div class="status-dot"></div>
+                                        <span>Online</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="chatbot-messages">
+                                    <div class="message bot-message">
+                                        <div class="message-avatar">
+                                            <i class="fas fa-robot"></i>
+                                        </div>
+                                        <div class="message-content">
+                                            <p>Hi, I'm Voyant. What would you like me to assist you with today?</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="message user-message">
+                                        <div class="message-content">
+                                            <p>Hi Voyant, how did we do during this weekend's mother's day sale?</p>
+                                        </div>
+                                        <div class="message-avatar">
+                                            <span>You</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="message bot-message">
+                                        <div class="message-avatar">
+                                            <i class="fas fa-robot"></i>
+                                        </div>
+                                        <div class="message-content">
+                                            <div class="response-section">
+                                                <div class="section-title">🎉 Top Highlights</div>
+                                                <ul>
+                                                    <li><strong>Revenue</strong> exceeded expectations by 23% with $847K in sales</li>
+                                                    <li><strong>Conversion rate</strong> improved to 4.8% (up from 3.2% last year)</li>
+                                                    <li><strong>Average order value</strong> increased to $89.50</li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="response-section">
+                                                <div class="section-title">⚠️ Needs Attention</div>
+                                                <ul>
+                                                    <li><strong>Inventory</strong> for premium gift items ran low by Sunday</li>
+                                                    <li><strong>Mobile checkout</strong> had 12% abandonment rate</li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="response-section">
+                                                <div class="section-title">📋 Recommended Next Steps</div>
+                                                <ul>
+                                                    <li>Restock premium gift items for upcoming Father's Day</li>
+                                                    <li>Optimize mobile checkout flow to reduce abandonment</li>
+                                                    <li>Increase customer service staff for peak periods</li>
+                                                    <li>Launch follow-up email campaign to capitalize on momentum</li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="report-link">
+                                                <p>Btw, I've also created a detailed report here if you'd like to dig in further</p>
+                                                <a href="#" class="report-button">
+                                                    <i class="fas fa-chart-bar"></i>
+                                                    View Detailed Report
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chatbot-input">
+                                    <div class="input-container">
+                                        <input type="text" placeholder="Ask me anything about your retail data..." disabled>
+                                        <button class="send-button" disabled>
+                                            <i class="fas fa-paper-plane"></i>
+                                        </button>
+                                    </div>
+                                    <p class="demo-note">💡 This is a demo interface.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Quick Access Section -->
+                <section class="features-section" id="dashboard">
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="feature-title">Analytics Dashboard</h3>
+                            <p class="feature-description">
+                                Access your comprehensive analytics dashboard with real-time metrics, performance indicators, and business insights.
+                            </p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3 class="feature-title">Reports & Insights</h3>
+                            <p class="feature-description">
+                                Generate detailed reports, view historical data, and get actionable insights to optimize your business operations.
+                            </p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <h3 class="feature-title">Platform Settings</h3>
+                            <p class="feature-description">
+                                Configure your analytics preferences, manage integrations, and customize your dashboard to match your business needs.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
